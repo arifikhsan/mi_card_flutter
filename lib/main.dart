@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -8,7 +10,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: Container(),
+        body: SafeArea(
+          child: Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.symmetric(vertical: 16, horizontal: 10),
+            color: Colors.white,
+            child: Text('data'),
+          ),
+        ),
       ),
     );
   }
